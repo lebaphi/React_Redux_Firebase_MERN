@@ -1,0 +1,22 @@
+{
+	"snapshotSerializers": ["enzyme-to-json/serializer"],
+	"setupFiles": ["<rootDir>/src/tests/setupTests.js"],
+	"verbose": true,
+	"clearMocks": true,
+	"collectCoverage": true,
+	"transform": {
+		"^.+\\.js$": "babel-jest"
+	},
+	"moduleNameMapper": {
+		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
+		"\\.(css|scss)$": "<rootDir>/src/tests/__mocks__/styleMock.js"
+	},
+	"globals": {
+		"FIREBASE_API_KEY": "AIzaSyAe8w0ShUYpxIWBn4EMe0t6MlId8iRysUo",
+		"FIREBASE_AUTH_DOMAIN": "test-db-cfa34.firebaseapp.com",
+		"FIREBASE_DATABASE_URL": "https://test-db-cfa34-default-rtdb.firebaseio.com",
+		"FIREBASE_PROJECT_ID": "test-db-cfa34",
+		"FIREBASE_STORAGE_BUCKET": "test-db-cfa34.appspot.com",
+		"FIREBASE_MESSAGING_SENDER_ID": "182428478480"
+	}
+}
