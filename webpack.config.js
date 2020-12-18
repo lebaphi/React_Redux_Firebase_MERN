@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const { WebpackPluginServe: Serve } = require('webpack-plugin-serve')
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
@@ -15,7 +14,7 @@ module.exports = env => {
 
 	return {
 		mode: isProduction ? 'production' : 'development',
-		entry: ['babel-polyfill', './src/app.js', 'webpack-plugin-serve/client'],
+		entry: ['babel-polyfill', './src/app.js'],
 		output: {
 			path: path.join(__dirname, 'public'),
 			filename: 'bundle.js',
@@ -39,7 +38,6 @@ module.exports = env => {
 			],
 		},
 		plugins: [
-			new Serve({}),
 			new webpack.DefinePlugin({
 				FIREBASE_API_KEY: JSON.stringify(process.env.FIREBASE_API_KEY),
 				FIREBASE_AUTH_DOMAIN: JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
