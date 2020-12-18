@@ -11,7 +11,7 @@ const config = {
 	storageBucket: FIREBASE_STORAGE_BUCKET,
 	messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
 }
-
+console.log(config)
 firebase.initializeApp(config)
 
 const database = firebase.database()
