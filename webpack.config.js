@@ -21,7 +21,6 @@ module.exports = env => {
 			filename: 'bundle.js',
 			publicPath: 'public/',
 		},
-
 		module: {
 			rules: [
 				{
@@ -50,7 +49,7 @@ module.exports = env => {
 				FIREBASE_MESSAGING_SENDER_ID: JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
 			}),
 		],
-		watch: true,
+		watch: false,
 		devtool: isProduction ? 'source-map' : 'inline-source-map',
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
